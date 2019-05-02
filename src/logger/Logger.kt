@@ -44,8 +44,7 @@ class Logger(private val type: Types? = Types.STDOUT) {
         println(message)
     }
 
-    private fun logToFile(message: String): Logger {
+    private fun logToFile(message: String) {
         this.file?.appendText(message) ?: throw Exception("You need to specify file first")
-        return this
     }
 }
